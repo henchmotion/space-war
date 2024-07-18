@@ -65,6 +65,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\GamedevDreamer\Scripts\Scroller.cs" />
+    <Compile Include="Assets\GamedevDreamer\Scripts\Obstacles\Spawn Obstacles.cs" />
     <Compile Include="Assets\GamedevDreamer\Scripts\Player\Player Movement.cs" />
   </ItemGroup>
   <ItemGroup>
