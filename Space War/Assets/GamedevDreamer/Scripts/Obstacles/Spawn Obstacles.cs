@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class SpawnObstacles : MonoBehaviour
 {
-   [SerializeField] public GameObject Obstacle;
-   [SerializeField] public  float maxX;
-   [SerializeField] public  float minX;
-   [SerializeField] public  float maxY;
-   [SerializeField] public float minY;
-   [SerializeField] public  float timeBetweenSpawn;
+    public GameObject Obstacle;
+    public  float maxX;
+    public  float minX;
+    public  float maxY;
+    public float minY;
+    public  float timeBetweenSpawn;
     private float spawnTime;
    
     void Update()
