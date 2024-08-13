@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class loopingbackground : MonoBehaviour
 {
-    public float backgroundSpeed;
+     public float backgroundSpeed;
     public Renderer backgroundrenderer;
    
 
