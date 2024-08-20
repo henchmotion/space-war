@@ -25,4 +25,9 @@ public class PlayerMovement : MonoBehaviour
     {
         rb.velocity = new Vector2(0, playerDirection.y * playerSpeed);
     }
+
+    // public bool canAttack()
+    // {
+    //     return horizontalInput ==
+    // }
 }
