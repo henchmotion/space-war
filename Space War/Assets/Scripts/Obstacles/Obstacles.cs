@@ -9,7 +9,7 @@ public class Obstacles : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
+        // player = GameObject.FindGameObjectWithTag("Player");
     }
 
      private void OnTriggerEnter2D(Collider2D collision)
@@ -19,10 +19,10 @@ public class Obstacles : MonoBehaviour
             Destroy(this.gameObject);
         }
 
-        else if (collision.tag =="Player")
-        {
-            Destroy(player.gameObject);
-        }
-     }
+        // else if (collision.tag =="Player")
+        // {
+        //     Destroy(player.gameObject);
+        // }
+    }
 
 }
