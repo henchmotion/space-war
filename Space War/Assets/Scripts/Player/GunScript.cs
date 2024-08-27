@@ -9,26 +9,17 @@ public class GunScript : MonoBehaviour
     public Transform firePoint; // The point from where the bullet is fired
 
 
-    void Upadate()
+    void Update()
     {
         // Check if the spacebar is pressed
-        if (Input.GetKeyDown(KeyCode.B))
+        if (Input.GetKeyDown(KeyCode.Space))
 
         {
             Shoot();
         }
     }
 
-    //void Upadate()
-    //{
-    //    // Check if the spacebar is pressed
-    //    if (Input.GetMouseButton(0))
-
-    //    {
-    //        Shoot();
-    //    }
-    //}
-
+    
 
 
 

@@ -24,7 +24,7 @@ public class SpawnObstacles2 : MonoBehaviour
             timeSinceLastSpawn = 0f;
         }
     }
-
+    
     void SpawnEnemy()
     {
         // Randomize the y position within a specified range

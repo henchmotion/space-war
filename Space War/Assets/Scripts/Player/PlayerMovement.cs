@@ -17,17 +17,13 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         float directionY = Input.GetAxisRaw("Vertical");
-        // float directionX = Input.GetAxisRaw("Horizontal");
-        playerDirection = new Vector2(0, directionY ).normalized;
+        float directionX = Input.GetAxisRaw("Horizontal");
+        playerDirection = new Vector2(directionX, directionY ).normalized;
     }
 
     private void FixedUpdate()
     {
-        rb.velocity = new Vector2(0, playerDirection.y * playerSpeed);
+        rb.velocity = new Vector2(playerDirection.x, playerDirection.y * playerSpeed);
     }
 
-    // public bool canAttack()
-    // {
-    //     return horizontalInput ==
-    // }
 }
