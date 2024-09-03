@@ -48,7 +48,7 @@ public class PlayerHealth : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         // Check if the player collided with an enemy
-        if (collision.gameObject.CompareTag("Enemy"))
+        if (collision.gameObject.CompareTag("Obstacle"))
         {
              Die(); // Player dies instantly on contact with the enemy
         }
