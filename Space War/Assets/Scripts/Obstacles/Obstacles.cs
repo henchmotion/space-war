@@ -5,6 +5,7 @@ using UnityEngine;
 public class Obstacles : MonoBehaviour
 {
     private GameObject player;
+    //private GameObject Enemy Bullet;
 
     // Start is called before the first frame update
     void Start()
@@ -12,17 +13,21 @@ public class Obstacles : MonoBehaviour
          player = GameObject.FindGameObjectWithTag("Player");
     }
 
-     private void OnTriggerEnter2D(Collider2D collision)
-     {
-        if(collision.tag == "Border")
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Border")
+        {
+            Destroy(this.gameObject);
+        }
+        else if (collision.tag == "EnemyBullet")
         {
             Destroy(this.gameObject);
         }
 
-        else if (collision.tag == "Player")
-        {
-            Destroy(player.gameObject);
-        }
+        //else if (collision.tag == "Player")
+        //{
+        //    Destroy(player.gameObject);
+        //}
     }
 
 }
