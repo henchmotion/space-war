@@ -8,8 +8,9 @@ public class EnemyBullet : MonoBehaviour
     public float deactivate_timer = 3f;
     public Vector2 direction;
     public bool isEnemy = true;
-
    
+
+
     private void OnEnable()
     {
         // Start the deactivation timer when the bullet is activated 
@@ -31,5 +32,16 @@ public class EnemyBullet : MonoBehaviour
     void Deactivate()
     {
         gameObject.SetActive(false);
+    }
+
+
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Border")
+        {
+            Destroy(this.gameObject);
+        }
+
     }
 }
