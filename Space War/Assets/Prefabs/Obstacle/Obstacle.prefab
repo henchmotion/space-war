@@ -128,7 +128,6 @@ GameObject:
   - component: {fileID: 7164959055333178586}
   - component: {fileID: 3179945462199732727}
   - component: {fileID: 6581864655342429855}
-  - component: {fileID: 194555527456586369}
   m_Layer: 0
   m_Name: Obstacle
   m_TagString: Obstacle
@@ -209,7 +208,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4353231620032642398}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bbadde8907e231546a0bce9737365a05, type: 3}
   m_Name: 
@@ -217,17 +216,3 @@ MonoBehaviour:
   bulletprefab: {fileID: 4569105352304462297, guid: 1adca512d8100204fbd16a6515d4693a, type: 3}
   firePoint: {fileID: 2356970478276157386}
   shootingInterval: 2
---- !u!114 &194555527456586369
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4353231620032642398}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 241354de942b1a84683a03b12ae6131f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 1
-  explosionPrefab: {fileID: 7847191294350957985, guid: 8bda0c12f923a7a429eb8ada658f7554, type: 3}

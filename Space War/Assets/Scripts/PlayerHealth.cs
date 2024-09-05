@@ -4,16 +4,20 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public int maxHealth = 3;
+    public int maxHealth = 5;
     [SerializeField] private int currentHealth;
+   
 
 
     // Start is called before the first frame update
     void Start()
     {
-      currentHealth = maxHealth;   
+        currentHealth = maxHealth;
+       
     }
 
+
+    
     public void TakeDamage (int damage)
     {
         currentHealth -= damage;

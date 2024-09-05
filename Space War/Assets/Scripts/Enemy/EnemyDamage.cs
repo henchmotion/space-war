@@ -4,8 +4,14 @@ using UnityEngine;
 
 public class EnemyDamage : MonoBehaviour
 {
+    public CameraShake cameraShake;
     public int health = 1; // Enemy's health, set to 3 for example
     public GameObject explosionPrefab;
+
+    void Start()
+    {
+        cameraShake = Camera.main.GetComponent<CameraShake>();
+    }
 
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -44,6 +50,11 @@ public class EnemyDamage : MonoBehaviour
         Explode();
         // You can add death effects, score increase, etc., here
         Destroy(gameObject); // Destroy the enemy game object
+
+        if (cameraShake != null) ;
+        {
+            cameraShake.Shake();
+        }
     }
 
     void Explode()
