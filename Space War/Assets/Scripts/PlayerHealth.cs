@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerHealth : MonoBehaviour
 {
     public int maxHealth = 5;
-    [SerializeField] private int currentHealth;
+    public int currentHealth { get; private set; }
    
 
 
@@ -57,6 +57,12 @@ public class PlayerHealth : MonoBehaviour
              Die(); // Player dies instantly on contact with the enemy
         }
        
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.E))
+            TakeDamage(1);
     }
 
 }
