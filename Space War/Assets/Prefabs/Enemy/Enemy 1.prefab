@@ -62,7 +62,7 @@ Transform:
   m_GameObject: {fileID: 8290809789798652901}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.17365, y: 0.034735, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3804544333366035614}
@@ -83,9 +83,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.11965327, y: -0.021338683}
+  m_Offset: {x: 0.028730828, y: -0.02133866}
   serializedVersion: 2
-  m_Radius: 0.9230924
+  m_Radius: 2.0444703
 --- !u!114 &3172815380810209889
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -150,7 +150,7 @@ MonoBehaviour:
   cameraShake: {fileID: 0}
   health: 1
   explosionPrefab: {fileID: 7847191294350957985, guid: 8bda0c12f923a7a429eb8ada658f7554, type: 3}
-  explodeSound: {fileID: 0}
+  explodeSound: {fileID: 8300000, guid: acd57e1565a2b384089fdf232494515a, type: 3}
 --- !u!114 &5585304327381699572
 MonoBehaviour:
   m_ObjectHideFlags: 0

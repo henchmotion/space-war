@@ -24,6 +24,13 @@ public class EnemyDamage : MonoBehaviour
             // Destroy the bullet after it hits the enemy
             Destroy(other.gameObject);
         }
+
+        if (other.CompareTag("Player"))
+        {
+            Die(); // Player dies instantly on contact with the enemy
+
+            Debug.Log("Enemy Destroy");
+        }
     }
 
     void TakeDamage(int damage)
@@ -43,6 +50,8 @@ public class EnemyDamage : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             Die(); // Player dies instantly on contact with the enemy
+
+            Debug.Log("Enemy Destroy");
         }
     }
 

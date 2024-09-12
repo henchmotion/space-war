@@ -6,6 +6,8 @@ public class Obstacles : MonoBehaviour
 {
     private GameObject player;
     [SerializeField] private float damage;
+    public GameObject explosionPrefab;
+    [SerializeField] private AudioClip explodeSound;
 
 
     // Start is called before the first frame update
@@ -20,6 +22,10 @@ public class Obstacles : MonoBehaviour
         if (collision.tag == "Player")
         {
             collision.GetComponent<PlayerHealth1>().TakeDamage(damage);
+            Destroy(this.gameObject);
+            SoundManager.instance.PlaySound(explodeSound);
+            Explode();
+
         }
         else if (collision.tag == "Border")
         {
@@ -32,6 +38,13 @@ public class Obstacles : MonoBehaviour
         //{
         //    Destroy(player.gameObject);
         //}
+    }
+
+    void Explode()
+    {
+        // Instantiate the explosion effect at the bullet's position and rotation
+        GameObject explosion = Instantiate(explosionPrefab, transform.position, transform.rotation);
+        Destroy(explosion, 1f);
     }
 
 }

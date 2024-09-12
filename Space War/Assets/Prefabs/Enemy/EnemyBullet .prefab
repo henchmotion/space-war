@@ -17,15 +17,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4192806403668712900, guid: 842983ccb0e87284d9bc53537bab7e57, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4192806403668712900, guid: 842983ccb0e87284d9bc53537bab7e57, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4192806403668712900, guid: 842983ccb0e87284d9bc53537bab7e57, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4192806403668712900, guid: 842983ccb0e87284d9bc53537bab7e57, type: 3}
       propertyPath: m_LocalPosition.x
@@ -107,23 +107,3 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &3472491120054971382
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4569105352304462297}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 204d8c2c8ccb7e542b3206ff9ddce4c0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 25
-  deactivate_timer: 3
-  direction: {x: 0, y: 0}
-  isEnemy: 1
-  damage: 1
-  cameraShake: {fileID: 0}
-  health: 1
-  explosionPrefab: {fileID: 7847191294350957985, guid: 8bda0c12f923a7a429eb8ada658f7554, type: 3}

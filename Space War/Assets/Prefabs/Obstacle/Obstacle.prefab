@@ -180,6 +180,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
+  explosionPrefab: {fileID: 7847191294350957985, guid: 8bda0c12f923a7a429eb8ada658f7554, type: 3}
 --- !u!50 &3179945462199732727
 Rigidbody2D:
   serializedVersion: 4
