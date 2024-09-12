@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4192806403668712900}
-  - component: {fileID: -4616225743337105270}
   - component: {fileID: 8406250258125886602}
-  m_Layer: 0
+  - component: {fileID: 6753185663474141633}
+  m_Layer: 6
   m_Name: PlayerBullet
   m_TagString: Player Bullet
   m_Icon: {fileID: 0}
@@ -34,22 +34,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-4616225743337105270
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8898298745344789146}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 867eec79a9ee5d340ad8c297d2ea57fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  direction: {x: 1, y: 0}
-  speed: 25
-  TimebeforeDestroy: 2
-  isEnemy: 0
 --- !u!58 &8406250258125886602
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -66,6 +50,22 @@ CircleCollider2D:
   m_Offset: {x: 0.5789912, y: -0.009119151}
   serializedVersion: 2
   m_Radius: 0.24852018
+--- !u!114 &6753185663474141633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8898298745344789146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 867eec79a9ee5d340ad8c297d2ea57fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  direction: {x: 1, y: 0}
+  speed: 15
+  TimebeforeDestroy: 2
+  isEnemy: 0
 --- !u!1001 &8198029069338342410
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -76,6 +76,10 @@ PrefabInstance:
     - target: {fileID: 8426961595353008949, guid: 9719c117cdb467f4b9046113cd8bb8a8, type: 3}
       propertyPath: m_Name
       value: bullet
+      objectReference: {fileID: 0}
+    - target: {fileID: 8426961595353008949, guid: 9719c117cdb467f4b9046113cd8bb8a8, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8426961595353008949, guid: 9719c117cdb467f4b9046113cd8bb8a8, type: 3}
       propertyPath: m_TagString

@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerHealth : MonoBehaviour
+public class PlayerHealthDuplicate : MonoBehaviour
 {
     public int maxHealth = 5;
     public int currentHealth { get; private set; }
+
+
 
 
 
@@ -20,6 +22,7 @@ public class PlayerHealth : MonoBehaviour
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
+        //currentHealth = Mathf.Clamp(currentHealth - _damage, 0, maxHealth);
 
         if (currentHealth <= 0)
         {
@@ -30,7 +33,7 @@ public class PlayerHealth : MonoBehaviour
     void Die()
     {
         // Add logic for plaer death, e.g play death animation, show game over  screen
-        Debug.Log("Player Died");
+        //Debug.Log("Player Died");
         Destroy(gameObject); // Destroy the Player GameObject
 
     }
@@ -57,11 +60,4 @@ public class PlayerHealth : MonoBehaviour
         }
 
     }
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.E))
-            TakeDamage(1);
-    }
-
 }

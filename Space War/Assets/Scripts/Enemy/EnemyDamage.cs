@@ -7,6 +7,7 @@ public class EnemyDamage : MonoBehaviour
     public CameraShake cameraShake;
     public int health = 1; // Enemy's health, set to 3 for example
     public GameObject explosionPrefab;
+    [SerializeField] private AudioClip explodeSound;
 
     void Start()
     {
@@ -54,6 +55,8 @@ public class EnemyDamage : MonoBehaviour
         if (cameraShake != null) ;
         {
             cameraShake.Shake();
+
+            SoundManager.instance.PlaySound(explodeSound);
         }
     }
 
@@ -62,5 +65,6 @@ public class EnemyDamage : MonoBehaviour
         // Instantiate the explosion effect at the enemy's position and rotation
         GameObject explosion = Instantiate(explosionPrefab, transform.position, transform.rotation);
         Destroy(explosion, 1f);
+       
     }
 }

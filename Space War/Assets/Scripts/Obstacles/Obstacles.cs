@@ -5,7 +5,8 @@ using UnityEngine;
 public class Obstacles : MonoBehaviour
 {
     private GameObject player;
-    
+    [SerializeField] private float damage;
+
 
     // Start is called before the first frame update
     void Start()
@@ -16,12 +17,16 @@ public class Obstacles : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Border")
+        if (collision.tag == "Player")
+        {
+            collision.GetComponent<PlayerHealth1>().TakeDamage(damage);
+        }
+        else if (collision.tag == "Border")
         {
             Destroy(this.gameObject);
         }
-       
-        
+
+
 
         //else if (collision.tag == "Player")
         //{

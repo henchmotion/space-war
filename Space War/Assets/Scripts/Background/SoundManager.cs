@@ -12,7 +12,7 @@ public class SoundManager : MonoBehaviour
     {
         // instance = this;
         soundSource = GetComponent<AudioSource>();
-        musicSource = transform.GetChild(0).GetComponent<AudioSource>();
+        //musicSource = transform.GetChild(0).GetComponent<AudioSource>();
 
         // Keep this object even when we go to new scene
         if (instance == null)
@@ -25,8 +25,8 @@ public class SoundManager : MonoBehaviour
             Destroy(gameObject);
 
         // Assign initial volumes
-        ChangeMusicVolume(0);
-        ChangeSoundVolume(0);
+        ChangeMusicVolume(1);
+        ChangeSoundVolume(1);
     }
 
     public void PlaySound(AudioClip _sound)

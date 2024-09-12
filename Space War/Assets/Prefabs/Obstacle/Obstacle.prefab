@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2356970478276157386}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: firePoint
   m_TagString: Untagged
   m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
@@ -41,7 +41,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8911324461380051493}
   - component: {fileID: 1195803412231087101}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ObstacleSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -127,8 +127,7 @@ GameObject:
   - component: {fileID: 7220342402035106404}
   - component: {fileID: 7164959055333178586}
   - component: {fileID: 3179945462199732727}
-  - component: {fileID: 6581864655342429855}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Obstacle
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -144,7 +143,7 @@ Transform:
   m_GameObject: {fileID: 4353231620032642398}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.11, y: 0.06682, z: 0}
-  m_LocalScale: {x: 0.831684, y: 0.831684, z: 0.831684}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8911324461380051493}
@@ -180,6 +179,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dea89f7cfb7fd9245a9020ded2164168, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 1
 --- !u!50 &3179945462199732727
 Rigidbody2D:
   serializedVersion: 4
@@ -201,18 +201,3 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &6581864655342429855
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4353231620032642398}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bbadde8907e231546a0bce9737365a05, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bulletprefab: {fileID: 4569105352304462297, guid: 1adca512d8100204fbd16a6515d4693a, type: 3}
-  firePoint: {fileID: 2356970478276157386}
-  shootingInterval: 2

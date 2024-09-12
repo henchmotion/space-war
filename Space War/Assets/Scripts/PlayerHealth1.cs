@@ -2,36 +2,55 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerHealth : MonoBehaviour
+public class PlayerHealth1 : MonoBehaviour
 {
-    public int maxHealth = 5;
-    public int currentHealth { get; private set; }
+
+    [Header("Health")]
+
+    [SerializeField] private float startingHealth;
+    public float currentHealth { get; private set; }
+    private Animator anim;
+    private bool dead;
+
+    [SerializeField] private AudioClip hurtSound;
 
 
-
-    // Start is called before the first frame update
-    void Start()
+    public void Awake()
     {
-        currentHealth = maxHealth;
-
+        currentHealth = startingHealth;
+        anim = GetComponent<Animator>();
+    
     }
 
 
-    public void TakeDamage(int damage)
+    public void TakeDamage(float damage)
     {
         currentHealth -= damage;
+        //currentHealth = Mathf.Clamp(currentHealth - damage, 0, startingHealth);
 
-        if (currentHealth <= 0)
+        if (currentHealth > 0)
+        {
+            anim.SetTrigger("Hurt");
+            //StartCoroutine(Invunerability());
+            SoundManager.instance.PlaySound(hurtSound);
+        }
+        else if (currentHealth <= 0)
         {
             Die();
         }
     }
 
+
+
+    
+
     void Die()
     {
         // Add logic for plaer death, e.g play death animation, show game over  screen
-        Debug.Log("Player Died");
+        //Debug.Log("Player Died");
         Destroy(gameObject); // Destroy the Player GameObject
+        //anim.SetTrigger("Die");
+        //SoundManager.instance.PlaySound(deathSound);
 
     }
 
@@ -58,10 +77,9 @@ public class PlayerHealth : MonoBehaviour
 
     }
 
-    private void Update()
+    public void AddHealth(float _value)
     {
-        if (Input.GetKeyDown(KeyCode.E))
-            TakeDamage(1);
+        currentHealth = Mathf.Clamp(currentHealth + _value, 0, startingHealth);
     }
 
 }

@@ -7,6 +7,7 @@ public class GunScript : MonoBehaviour
 
     public GameObject bulletprefab; // The bullet prefab to instantiate
     public Transform firePoint; // The point from where the bullet is fired
+    [SerializeField] private AudioClip bulletSound;
 
 
     void Update()
@@ -26,7 +27,9 @@ public class GunScript : MonoBehaviour
     // Update is called once per frame
     void Shoot()
     {
+       
         // Instantiate the bullet at the fire point's position and rotation
         Instantiate(bulletprefab, firePoint.position, firePoint.rotation);
+        SoundManager.instance.PlaySound(bulletSound);
     }
 }

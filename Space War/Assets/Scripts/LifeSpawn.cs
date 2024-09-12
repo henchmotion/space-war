@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpawnObstacles2 : MonoBehaviour
+public class LifeSpawn : MonoBehaviour 
 {
-    public GameObject ObstaclePrefab;   // The obstacle prefab to spawn
+    public GameObject lifePrefab;   // The collectible prefab to spawn
     public float spawnInterval = 2f; // Time interval between spawns
     public float spawnXOffset = 10f; // How far off-screen to the right enemies spawn
     public float moveSpeed = 5f;     // Speed at which enemies move left
@@ -20,12 +20,12 @@ public class SpawnObstacles2 : MonoBehaviour
 
         if (timeSinceLastSpawn >= spawnInterval)
         {
-            ObstacleSpawn();
+            HealthCollectible();
             timeSinceLastSpawn = 0f;
         }
     }
-    
-    void ObstacleSpawn()
+
+    void HealthCollectible()
     {
         // Randomize the y position within a specified range
         float spawnY = Random.Range(minY, maxY);
@@ -37,13 +37,13 @@ public class SpawnObstacles2 : MonoBehaviour
         Vector2 spawnPosition = new Vector2(spawnX, spawnY);
 
         // Instantiate the enemy at the spawn position
-        GameObject obstacle = Instantiate(ObstaclePrefab, spawnPosition, Quaternion.identity);
+        GameObject life = Instantiate(lifePrefab, spawnPosition, Quaternion.identity);
 
         // Move the enemy left by applying velocity directly
-        Rigidbody2D obstacleRb = obstacle.GetComponent<Rigidbody2D>();
-        if (obstacleRb != null)
+        Rigidbody2D lifeRb = life.GetComponent<Rigidbody2D>();
+        if (lifeRb != null)
         {
-            obstacleRb.velocity = Vector2.left * moveSpeed;
+            lifeRb.velocity = Vector2.left * moveSpeed;
         }
     }
 }

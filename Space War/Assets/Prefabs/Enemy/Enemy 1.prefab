@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8057699093582395761}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: firePoint
   m_TagString: Untagged
   m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: 1454783093095186468}
   - component: {fileID: 2761803789938727476}
   - component: {fileID: 5585304327381699572}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Enemy 1
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -62,7 +62,7 @@ Transform:
   m_GameObject: {fileID: 8290809789798652901}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.17365, y: 0.034735, z: 0}
-  m_LocalScale: {x: 0.3141888, y: 0.3141888, z: 0.3141888}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3804544333366035614}
@@ -98,6 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dea89f7cfb7fd9245a9020ded2164168, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 0
 --- !u!50 &7153538130904837964
 Rigidbody2D:
   serializedVersion: 4
@@ -146,8 +147,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 241354de942b1a84683a03b12ae6131f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cameraShake: {fileID: 0}
   health: 1
   explosionPrefab: {fileID: 7847191294350957985, guid: 8bda0c12f923a7a429eb8ada658f7554, type: 3}
+  explodeSound: {fileID: 0}
 --- !u!114 &5585304327381699572
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -173,7 +176,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3804544333366035614}
   - component: {fileID: 6917333683728237894}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ObstacleSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
