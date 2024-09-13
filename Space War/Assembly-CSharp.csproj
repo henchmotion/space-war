@@ -78,7 +78,7 @@
     <Compile Include="Assets\Scripts\Player\GunScript.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_UiFrameRateCounter.cs" />
     <Compile Include="Assets\Scripts\Background\loopingbackground.cs" />
-    <Compile Include="Assets\Scripts\PlayerHealth1.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerHealth1.cs" />
     <Compile Include="Assets\Scripts\Health.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMPro_InstructionOverlay.cs" />
@@ -121,8 +121,9 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\Scripts\HealthCollectibles.cs" />
     <Compile Include="Assets\Scripts\LifeSpawn.cs" />
-    <Compile Include="Assets\Scripts\PlayerHealth.cs" />
-    <Compile Include="Assets\Scripts\PlayerHealthDuplicate.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerHealth.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerHealthDuplicate.cs" />
+    <Compile Include="Assets\Scripts\UI\SelectionArrow.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

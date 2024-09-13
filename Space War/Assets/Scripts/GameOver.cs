@@ -7,6 +7,8 @@ public class GameOver : MonoBehaviour
 {
     public GameObject gameOverPanel;
 
+    [SerializeField] private AudioClip gameOverSound;
+    
 
     // Update is called once per frame
     void Update()
@@ -14,6 +16,7 @@ public class GameOver : MonoBehaviour
         if (GameObject.FindGameObjectWithTag("Player") == null)
         {
             gameOverPanel.SetActive(true);
+            SoundManager.instance.PlaySound(gameOverSound);
         }
     }
 

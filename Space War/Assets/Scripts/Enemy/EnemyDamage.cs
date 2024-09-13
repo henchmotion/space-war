@@ -8,6 +8,7 @@ public class EnemyDamage : MonoBehaviour
     public int health = 1; // Enemy's health, set to 3 for example
     public GameObject explosionPrefab;
     [SerializeField] private AudioClip explodeSound;
+    [SerializeField] private AudioClip hurtSound;
 
     void Start()
     {
@@ -23,11 +24,16 @@ public class EnemyDamage : MonoBehaviour
 
             // Destroy the bullet after it hits the enemy
             Destroy(other.gameObject);
+            SoundManager.instance.PlaySound(explodeSound);
         }
 
         if (other.CompareTag("Player"))
         {
             Die(); // Player dies instantly on contact with the enemy
+            Explode();
+            SoundManager.instance.PlaySound(hurtSound);
+
+
 
             Debug.Log("Enemy Destroy");
         }
@@ -41,6 +47,7 @@ public class EnemyDamage : MonoBehaviour
         if (health <= 0)
         {
             Die(); // Call the Die function if health is zero
+            Explode();
         }
     }
 
@@ -49,24 +56,22 @@ public class EnemyDamage : MonoBehaviour
         // Check if the player collided with an enemy
         if (collision.gameObject.CompareTag("Player"))
         {
+   
             Die(); // Player dies instantly on contact with the enemy
+            Explode();
 
             Debug.Log("Enemy Destroy");
+            SoundManager.instance.PlaySound(hurtSound);
         }
     }
 
     void Die()
     {
-        Explode();
+        
         // You can add death effects, score increase, etc., here
         Destroy(gameObject); // Destroy the enemy game object
 
-        if (cameraShake != null) ;
-        {
-            cameraShake.Shake();
-
-            SoundManager.instance.PlaySound(explodeSound);
-        }
+        
     }
 
     void Explode()
@@ -74,6 +79,12 @@ public class EnemyDamage : MonoBehaviour
         // Instantiate the explosion effect at the enemy's position and rotation
         GameObject explosion = Instantiate(explosionPrefab, transform.position, transform.rotation);
         Destroy(explosion, 1f);
-       
+
+        if (cameraShake != null) ;
+        {
+            cameraShake.Shake();
+
+        
+        }
     }
 }

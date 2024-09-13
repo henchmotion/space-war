@@ -99,6 +99,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 0
+  explosionPrefab: {fileID: 0}
+  explodeSound: {fileID: 0}
 --- !u!50 &7153538130904837964
 Rigidbody2D:
   serializedVersion: 4
@@ -151,6 +153,7 @@ MonoBehaviour:
   health: 1
   explosionPrefab: {fileID: 7847191294350957985, guid: 8bda0c12f923a7a429eb8ada658f7554, type: 3}
   explodeSound: {fileID: 8300000, guid: acd57e1565a2b384089fdf232494515a, type: 3}
+  hurtSound: {fileID: 8300000, guid: 0f3e439070c2cf74f83c4ea88045fe1c, type: 3}
 --- !u!114 &5585304327381699572
 MonoBehaviour:
   m_ObjectHideFlags: 0
