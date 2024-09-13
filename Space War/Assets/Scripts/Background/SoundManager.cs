@@ -12,7 +12,7 @@ public class SoundManager : MonoBehaviour
     {
         // instance = this;
         soundSource = GetComponent<AudioSource>();
-        //musicSource = transform.GetChild(0).GetComponent<AudioSource>();
+        musicSource = transform.GetChild(0).GetComponent<AudioSource>();
 
         // Keep this object even when we go to new scene
         if (instance == null)

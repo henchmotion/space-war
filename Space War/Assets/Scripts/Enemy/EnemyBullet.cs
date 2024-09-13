@@ -84,7 +84,7 @@ public class EnemyBullet : MonoBehaviour
         
         Destroy(gameObject); // Destroy the enemy game object
 
-        if (cameraShake != null) ;
+        if (cameraShake != null);
         {
             cameraShake.Shake();
         }
