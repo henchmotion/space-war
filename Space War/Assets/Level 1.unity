@@ -3228,6 +3228,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ed275195872f234da6d702221609b1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volumeName: soundVolume
+  textIntro: 'SOUNDS: '
+  txt: {fileID: 0}
 --- !u!1 &1249064897
 GameObject:
   m_ObjectHideFlags: 0
@@ -3978,6 +3981,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ed275195872f234da6d702221609b1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volumeName: musicVolume
+  textIntro: 'MUSIC: '
+  txt: {fileID: 0}
 --- !u!1 &1607979846
 GameObject:
   m_ObjectHideFlags: 0
@@ -4592,9 +4598,17 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4293358576070243174, guid: 9b5bb4f65953a8343abdea78bbf5910c, type: 3}
+      propertyPath: deathSound
+      value: 
+      objectReference: {fileID: 8300000, guid: f0d8166f883a1f842b9995dd612b5b2f, type: 3}
+    - target: {fileID: 4293358576070243174, guid: 9b5bb4f65953a8343abdea78bbf5910c, type: 3}
       propertyPath: startingHealth
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 4293358576070243174, guid: 9b5bb4f65953a8343abdea78bbf5910c, type: 3}
+      propertyPath: explosionPrefab
+      value: 
+      objectReference: {fileID: 7847191294350957985, guid: 8bda0c12f923a7a429eb8ada658f7554, type: 3}
     - target: {fileID: 4673893524356595325, guid: 9b5bb4f65953a8343abdea78bbf5910c, type: 3}
       propertyPath: m_RootOrder
       value: 1

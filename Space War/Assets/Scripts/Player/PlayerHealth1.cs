@@ -13,13 +13,15 @@ public class PlayerHealth1 : MonoBehaviour
     private bool dead;
 
     [SerializeField] private AudioClip hurtSound;
+    [SerializeField] private AudioClip deathSound;
+    public GameObject explosionPrefab;
 
 
     public void Awake()
     {
         currentHealth = startingHealth;
         anim = GetComponent<Animator>();
-    
+
     }
 
 
@@ -42,7 +44,7 @@ public class PlayerHealth1 : MonoBehaviour
 
 
 
-    
+
 
     void Die()
     {
@@ -50,7 +52,9 @@ public class PlayerHealth1 : MonoBehaviour
         //Debug.Log("Player Died");
         Destroy(gameObject); // Destroy the Player GameObject
         //anim.SetTrigger("Die");
-        //SoundManager.instance.PlaySound(deathSound);
+        SoundManager.instance.PlaySound(deathSound);
+        Explode();
+
 
     }
 
@@ -69,17 +73,24 @@ public class PlayerHealth1 : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        // Check if the player collided with an enemy
-        //if (collision.gameObject.CompareTag("Obstacle"))
-        //{
-        //    Die(); // Player dies instantly on contact with the enemy
-        //}
+        //Check if the player collided with an enemy
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            TakeDamage(1); // Player dies instantly on contact with the enemy
+        }
 
     }
 
     public void AddHealth(float _value)
     {
         currentHealth = Mathf.Clamp(currentHealth + _value, 0, startingHealth);
+    }
+
+    void Explode()
+    {
+        // Instantiate the explosion effect at the bullet's position and rotation
+        GameObject explosion = Instantiate(explosionPrefab, transform.position, transform.rotation);
+        Destroy(explosion, 1f);
     }
 
 }

@@ -52,6 +52,12 @@ public class GameOver : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
+    public void Play()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene("Level 1"); // Loads the scene by its name
+    }
+
     public void Quit()
     {
         Application.Quit(); //Quits the game (Only works on build)

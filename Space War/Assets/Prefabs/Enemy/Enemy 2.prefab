@@ -48,7 +48,7 @@ GameObject:
   - component: {fileID: 9196384483219383885}
   m_Layer: 7
   m_Name: Enemy 2
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -120,6 +120,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 0
+  explosionPrefab: {fileID: 0}
+  explodeSound: {fileID: 0}
 --- !u!114 &3294030547802363001
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -151,6 +153,7 @@ MonoBehaviour:
   health: 1
   explosionPrefab: {fileID: 7847191294350957985, guid: 8bda0c12f923a7a429eb8ada658f7554, type: 3}
   explodeSound: {fileID: 8300000, guid: acd57e1565a2b384089fdf232494515a, type: 3}
+  hurtSound: {fileID: 0}
 --- !u!114 &9196384483219383885
 MonoBehaviour:
   m_ObjectHideFlags: 0
